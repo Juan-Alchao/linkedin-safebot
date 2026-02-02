@@ -1,4 +1,4 @@
-#  LinkedIn Automation Tool
+# 🤖 LinkedIn Automation Tool
 
 <div align="center">
 
@@ -6,71 +6,167 @@
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Status](https://img.shields.io/badge/status-beta-yellow)
 
-Una herramienta práctica de automatización para LinkedIn con comportamiento humano simulado y límites de seguridad integrados.
-
-[Características](#-características) • [Instalación](#-instalación) • [Uso](#-uso) • [Advertencia](#-advertencia)
+Una herramienta práctica de automatización para LinkedIn con comportamiento humano simulado.
 
 </div>
-
-## 📋 Tabla de Contenidos
-- [Características](#-características)
-- [Advertencia](#-advertencia)
-- [Instalación](#-instalación)
-- [Configuración](#-configuración)
-- [Uso](#-uso)
-- [Ejemplos](#-ejemplos)
-- [Estructura del Proyecto](#-estructura-del-proyecto)
-- [Contribuir](#-contribuir)
-- [Licencia](#-licencia)
-- [Disclaimer](#-disclaimer)
-
-## ✨ Características
-
-### 🤖 Automatización Inteligente
-- **Comportamiento humano simulado**: Retardos variables, movimientos de ratón, scroll realista
-- **Gestión de límites**: Respeto automático de los límites diarios de LinkedIn
-- **Evitación de detección**: Técnicas para reducir el riesgo de detección como bot
-
-### 🔒 Seguridad Integrada
-- **Límites conservadores**: 40 conexiones/día (vs 100 permitidos por LinkedIn)
-- **Pausas automáticas**: Descansos entre acciones simulando comportamiento humano
-- **Gestión de errores**: Recuperación automática de errores comunes
-
-### 📊 Gestión de Datos
-- **Exportación CSV**: Guarda perfiles encontrados en formato estructurado
-- **Logs detallados**: Registro completo de todas las actividades
-- **Estadísticas**: Seguimiento de métricas y rendimiento
-
-### 🛠️ Facilidad de Uso
-- **Configuración simple**: Archivo JSON fácil de entender
-- **Interfaz CLI**: Menú interactivo y comandos directos
-- **Modo automático**: Ejecución programada de campañas
 
 ## ⚠️ ADVERTENCIA
 
 **IMPORTANTE**: Esta herramienta debe usarse RESPONSABLEMENTE:
+- Viola los Términos de Servicio de LinkedIn
+- Puede resultar en suspensión de cuenta
+- Úsala bajo tu propio riesgo
+- Recomendado solo para fines educativos
 
-1. **Violación de TOS**: La automatización va contra los Términos de Servicio de LinkedIn
-2. **Riesgo de cuenta**: Posible suspensión temporal o permanente de tu cuenta
-3. **Uso ético**: No spamear, respetar límites, personalizar mensajes
-4. **Propósito educativo**: Este proyecto es principalmente para fines educativos
+## 🚀 Características
 
-**RECOMENDACIONES**:
-- Usa una cuenta secundaria para pruebas
-- No excedas los límites configurados
-- Personaliza los mensajes de conexión
-- Mantén intervalos humanos entre acciones
+- **Comportamiento humano**: Retardos variables, escritura realista
+- **Límites seguros**: 40 conexiones/día (vs 100 permitidos)
+- **Gestión de sesiones**: Perfiles de Chrome persistentes
+- **Logs detallados**: Registro completo de actividades
+- **Configuración simple**: Archivo JSON fácil de editar
 
-## 🚀 Instalación
+## 📦 Instalación
 
-### Prerrequisitos
-- Python 3.8 o superior
-- Google Chrome instalado
-- Cuenta de LinkedIn (se recomienda secundaria para pruebas)
+### 1. Prerrequisitos
+```bash
+# Python 3.8+
+python --version
 
-### Instalación Rápida
+# Google Chrome instalado
+```
 
-1. **Clonar el repositorio**:
+2. Clonar e instalar
 ```bash
 git clone https://github.com/tuusuario/linkedin-automation-tool.git
 cd linkedin-automation-tool
+
+# Instalar dependencias
+pip install -r requirements.txt
+
+# Configurar entorno
+python src/linkedin_bot.py --setup
+```
+
+3. Configurar
+```bash
+# Copiar y editar configuración
+cp config.json.example config.json
+# Edita config.json con tus credenciales
+```
+
+4. Instalar ChromeDriver (automático)
+```bash
+python scripts/install_chromedriver.py
+```
+
+🎯 Uso Básico
+
+Modo Interactivo
+```bash
+python src/linkedin_bot.py
+```
+
+Comandos Directos
+```bash
+# Solo buscar perfiles
+python src/linkedin_bot.py --search "CTO" --location "Madrid"
+
+# Ejecutar campaña
+python src/linkedin_bot.py --campaign "tech_spain"
+```
+
+⚙️ Configuración
+
+Edita config.json:
+
+```json
+{
+  "accounts": [
+    {
+      "email": "tu_email@ejemplo.com",
+      "password": "tu_contraseña",
+      "name": "principal"
+    }
+  ],
+  "campaigns": [
+    {
+      "name": "tech_spain",
+      "keywords": ["CTO", "Tech Lead"],
+      "locations": ["Spain"],
+      "daily_connections": 25
+    }
+  ]
+}
+```
+
+📁 Estructura del Proyecto
+
+```text
+linkedin-automation-tool/
+├── src/linkedin_bot.py          # Código principal
+├── scripts/install_chromedriver.py
+├── config.json.example         # Configuración de ejemplo
+├── requirements.txt            # Dependencias
+├── .gitignore                 # Archivos ignorados
+├── LICENSE                    # Licencia MIT
+└── README.md                  # Esta documentación
+```
+
+🛡️ Seguridad
+
+NUNCA subas config.json a GitHub
+
+Usa cuenta secundaria para pruebas
+
+Respeta los límites configurados
+
+Personaliza los mensajes de conexión
+
+🤝 Contribuir
+
+Haz fork del proyecto
+
+Crea una rama: git checkout -b feature/nueva-funcionalidad
+
+Commit: git commit -m 'Añadir funcionalidad'
+
+Push: git push origin feature/nueva-funcionalidad
+
+Abre un Pull Request
+
+📄 Licencia
+
+MIT License - ver LICENSE para detalles.
+
+⚖️ Disclaimer
+
+Este software se proporciona "TAL CUAL", sin garantías. El autor no se hace responsable del mal uso de esta herramienta.
+
+<div align="center"> Hecho con ❤️ para la comunidad de desarrolladores </div>
+
+🚀 COMANDOS PARA SUBIR A GITHUB
+```bash
+# 1. Inicializar repositorio
+git init
+
+# 2. Añadir archivos
+git add .
+
+# 3. Primer commit
+git commit -m "Initial commit: LinkedIn Automation Tool v1.0"
+
+# 4. Crear repositorio en GitHub (desde website)
+#    https://github.com/new
+#    Nombre: linkedin-automation-tool
+#    Sin README, .gitignore ni LICENSE (ya los tenemos)
+
+# 5. Añadir remoto
+git remote add origin https://github.com/TU_USUARIO/linkedin-automation-tool.git
+
+# 6. Renombrar rama a main
+git branch -M main
+
+# 7. Subir
+git push -u origin main
+```
