@@ -1,4 +1,4 @@
-# 🤖 LinkedIn Automation Tool
+#  LinkedIn Automation Tool
 
 <div align="center">
 
