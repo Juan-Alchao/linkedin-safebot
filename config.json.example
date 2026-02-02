@@ -1,1 +1,24 @@
-ejemplo
+{
+  "accounts": [
+    {
+      "email": "TU_EMAIL_AQUI",
+      "password": "TU_CONTRASEÑA_AQUI",
+      "name": "principal"
+    }
+  ],
+  "campaigns": [
+    {
+      "name": "ejemplo_campaña",
+      "keywords": ["recruiter", "tech lead"],
+      "locations": ["Spain"],
+      "daily_connections": 25,
+      "daily_messages": 10,
+      "schedule": "9:00-18:00"
+    }
+  ],
+  "settings": {
+    "max_runtime_hours": 3,
+    "screenshot_errors": true,
+    "save_profiles": true
+  }
+}
