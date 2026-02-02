@@ -143,7 +143,11 @@ MIT License - ver LICENSE para detalles.
 
 Este software se proporciona "TAL CUAL", sin garantías. El autor no se hace responsable del mal uso de esta herramienta.
 
-<div align="center"> Hecho con ❤️ para la comunidad de desarrolladores </div>
+
+<div align="center"> Hecho para Mi equipo de trabajo CHC Asesorias </div>
+
+
+
 
 🚀 COMANDOS PARA SUBIR A GITHUB
 ```bash
