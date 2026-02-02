@@ -1,0 +1,16 @@
+linkedin-safebot/
+├── .gitignore              # Archivos a ignorar
+├── LICENSE                 # Licencia MIT
+├── README.md               # Documentación completa
+├── requirements.txt        # Dependencias Python
+├── linkedin_bot.py         # Código principal
+├── config.json             # Configuración (EJEMPLO - no subir real)
+├── config.example.json     # Ejemplo de configuración (sí subir)
+├── run_campaign.py         # Ejecución programada
+├── utils/                  # Utilidades adicionales (opcional)
+│   ├── __init__.py
+│   ├── analytics.py
+│   └── export_tools.py
+└── docs/                   # Documentación adicional (opcional)
+    ├── setup_guide.md
+    └── best_practices.md
