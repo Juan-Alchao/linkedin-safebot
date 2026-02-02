@@ -1,1 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
 
+[project]
+name = "linkedin-automation-tool"
+version = "1.0.0"
+description = "Herramienta práctica de automatización para LinkedIn"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Tu Nombre", email = "tu@email.com"}
+]
+keywords = ["linkedin", "automation", "selenium", "networking"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+]
+
+[project.scripts]
+linkedin-bot = "src.linkedin_bot:main"
