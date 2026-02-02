@@ -1,1 +1,2 @@
-requirements.txtrequirements.txtrequirements.txtrequirements.txtrequirements.txtrequirements.txt
+undetected-chromedriver==3.5.4
+selenium==4.15.0
